@@ -1,0 +1,14 @@
+{
+  "name": "Electrocardiograph",
+  "description": "EKG",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions" : [
+    "serial"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

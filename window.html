@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="global.js"></script>
+    <script src="ekg_app.js"></script>
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="canvasjs.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="buzz.js"></script>
+    <script src="ekg.js"></script>
+  </head>
+  <body bgcolor="black">
+    <div id="chartContainer" style="height: 300px; width:100%;"></div>
+    <div id="bpm" style="font-size: 40px; padding-bottom: 70px; padding-top: 0px; line-height: 50px; height: 50px;"></div>
+    <div id="debugQRS"></div>
+    <div id="debugQT"></div>
+    <p style="color: white" id="debug"></p>
+    <p style="color: white" id="debugRThreshold"></p>
+    <table style="color: white">
+      <tr>
+        <td>Point</td>
+        <td>Value (mV)</td> 
+        <td>Position</td>
+      </tr>
+      <tr>
+        <td>R</td>
+        <td id="rValue"></td> 
+        <td id="rPosition"></td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td id="qValue"></td> 
+        <td id="qPosition"></td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td id="sValue"></td> 
+        <td id="sPosition"></td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td id="tValue"></td> 
+        <td id="tPosition"></td>
+      </tr>
+    </table>
+    <p style="color: white" id="debugLastQ"></p>
+    <p style="color: white" id="debugLastR"></p>
+    <p style="color: white" id="debugLastS"></p>
+    <p style="color: white" id="debugLastT"></p>
+    <button id="reset_button">Recalculate Thresholds</button>
+
+    <script src="display.js"></script>
+  </body>
+  <footer>
+    <div id="qrs_status" style="font-size: 20pt"></div>
+    <div id="qt_status" style="font-size: 20pt"></div>
+    <div id="bpm_status" style="font-size: 20pt"></div>
+    <div id="flatline_status" style="font-size: 20pt"></div>
+    <div id="normal_status" style="font-size: 20pt"></div>
+  </footer>
+</html>
